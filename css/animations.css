@@ -1,0 +1,99 @@
+/* ===== ANIMATION STYLES ===== */
+/* No CSS transform or translate used */
+
+/* Fade In Animation */
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
+/* Button Hover Glow */
+.btn-glow:hover {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5), 0 0 40px rgba(212, 175, 55, 0.2);
+}
+
+.btn-accent-glow:hover {
+    box-shadow: 0 0 20px rgba(231, 84, 128, 0.5), 0 0 40px rgba(231, 84, 128, 0.2);
+}
+
+/* Card Hover Effect */
+.card-hover {
+    transition: box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.card-hover:hover {
+    box-shadow: 0 8px 30px rgba(122, 30, 58, 0.15);
+    border-color: #D4AF37;
+}
+
+/* Image Hover Brightness */
+.img-hover {
+    transition: filter 0.35s ease, opacity 0.35s ease;
+}
+
+.img-hover:hover {
+    filter: brightness(1.1);
+}
+
+/* WhatsApp Button Glow */
+.whatsapp-glow {
+    transition: box-shadow 0.35s ease;
+}
+
+.whatsapp-glow:hover {
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.6), 0 0 40px rgba(37, 211, 102, 0.3);
+}
+
+/* Section Slide Up (using opacity + margin) */
+.slide-up {
+    opacity: 0;
+    margin-top: 30px;
+    transition: opacity 0.5s ease, margin-top 0.5s ease;
+}
+
+.slide-up.visible {
+    opacity: 1;
+    margin-top: 0;
+}
+
+/* Letter Spacing Hover */
+.letter-hover {
+    transition: letter-spacing 0.2s ease, color 0.2s ease;
+}
+
+.letter-hover:hover {
+    letter-spacing: 2px;
+}
+
+/* Lightbox Animations */
+.lightbox {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+.lightbox.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Pulse animation for WhatsApp */
+@keyframes pulse-shadow {
+    0% {
+        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 25px rgba(37, 211, 102, 0.7);
+    }
+    100% {
+        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    }
+}
+
+.whatsapp-pulse {
+    animation: pulse-shadow 2s infinite ease-in-out;
+}
